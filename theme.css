@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+}
+.header {
+    background-image: url(./img/img.jpg);
+    background-repeat: no-repeat;
+    background-position: center top; /* Center the image and position it towards the top */
+    background-attachment: scroll;
+    background-size: cover;
+    height: 60vh; /* Adjust header height for larger screens */
+    margin: 0;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Hide any overflow */
+}
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Add an overlay to the background image */
+}
+.heading {
+    color: #ffffff;
+    font-family: 'Caveat', cursive;
+    font-size: 6em;
+    font-weight: normal;
+    text-shadow: 0 0 10px #000;
+    z-index: 1; /* Ensure the heading text appears above the overlay */
+}
+.heading-subtext {
+    color: #fff;
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: .6em;
+}
+.fixed-button {
+    background: rgba(20, 20, 20, .5);
+    border-radius: 1em;
+    bottom: 1em;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    position: fixed;
+    right: 1em;
+    text-decoration: none;
+    z-index: 9999;
+}
+.fixed-button::after {
+    content: "\25BE";
+    display: block;
+    font-size: 28px;
+    line-height: 0;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+.fixed-button:active,
+.fixed-button:hover {
+    background: rgba(20, 20, 20, .9);
+}
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section {
+    flex: 1 1 calc(50% - 2em);
+    margin: 1em;
+    max-width: calc(50% - 2em);
+}
+.sub-heading {
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+}
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details {
+    margin: 0 auto 8em;
+    text-align: center;
+    max-width: 600px;
+}
+.details-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.fas {
+    font-size: 3em;
+    opacity: .8;
+}
+.resort-image {
+    width: 100%;
+}
+@media only screen {
+
+    .header {
+        height: 200vh; /* Ensure full screen height for smaller devices */
+    }
+}
+@media only screen and (max-width: 1200px) {
+
+    .header {
+        height: 150vh; /* Ensure full screen height for smaller devices */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .heading {
+        font-size: 4em;
+    }
+    .header {
+        background-attachment: fixed;
+        height: 100vh; /* Ensure full screen height for smaller devices */
+    }
+}
+
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.footer-social {
+    margin-bottom: 1em;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #f39c12;
+}
+
+.footer-back-to-top {
+    margin-bottom: 1em;
+}
+
+.back-to-top {
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-to-top:hover {
+    color: #f39c12;
+}
+
+.footer-copyright {
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: #bbb;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/*
+/* Add space between icons and text */
+.icon-spacing {
+    margin-bottom: 10px; /* Adjust this value as needed */
+    vertical-align: middle; /* Aligns the icon properly with the text */
+}
+
+/* Style the image upload section */
+.image-upload  {
+    margin-top: 20px;
+    background: #f9f9f9; /* Light background color for better readability */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Set background for the entire page */
+body {
+    background: url('./img/resort.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire page */
+    font-family: 'Quicksand', sans-serif;
+}
+/*<img class="resort-image" src="./img/img.png" alt="Resort" />
+        */
+
+
+
